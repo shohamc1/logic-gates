@@ -18,8 +18,7 @@ void andfn() {
         result = true;
     }
 
-    cout << "Result: ";
-    cin >> result;
+    cout << "Result: " << result << endl;
 }
 
 void orfn() {
@@ -39,15 +38,69 @@ void orfn() {
         result = false;
     }
 
-    cout << "Result: ";
-    cin >> result;
+    cout << "Result: " << result << endl;
+}
+
+void notfn() {
+    bool a;
+
+    cout << "Enter the value of a: ";
+    cin >> a;
+
+    if (a == true) {
+        a = false;
+    }
+    else {
+        a = true;
+    }
+
+    cout << "Result: " << a << endl;
+}
+
+void norfn() {
+    bool a, b, result;
+
+    cout << "Enter the value of a: ";
+    cin >> a;
+
+    cout << "Enter the value of b: ";
+    cin >> b;
+
+    if (a == false && b == false) {
+        result = true;
+    }
+
+    else {
+        result = false;
+    }
+
+    cout << "Result: " << result << endl;
+}
+
+void nandfn() {
+    bool a, b, result;
+
+    cout << "Enter the value of a: ";
+    cin >> a;
+    cout << "Enter the value of b: ";
+    cin >> b;
+
+    if (a == true && b == true) {
+        result = false;
+    }
+    
+    else {
+        result = true;
+    }
+
+    cout << "Result: " << result << endl;
 }
 
 int main() {
     int choice;
 
     for (;;) {
-        cout << "1. AND\n2. OR\n3. NOR\n4. NAND\n5. NOR";
+        cout << "1. AND\n2. OR\n3. NOR\n4. NAND\n5. NOR\n6. NOT";
         switch(choice) {
             case 1:
                 andfn();
@@ -63,6 +116,9 @@ int main() {
                 break;
             case 5:
                 norfn();
+                break;
+            case 6:
+                notfn();
                 break;
             default:
                 cout << "Wrong choice.\n";
