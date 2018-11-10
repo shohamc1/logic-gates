@@ -17,10 +17,30 @@ void andfn() {
     else {
         result = true;
     }
+
+    cout << "Result: ";
+    cin >> result;
 }
 
 void orfn() {
     bool x, y, result;
+
+    cout << "Enter the value of x: ";
+    cin >> x;
+
+    cout << "Enter the value of y: ";
+    cin >> y;
+
+    if (x == true || y == true) {
+        result = true;
+    }
+
+    else {
+        result = false;
+    }
+
+    cout << "Result: ";
+    cin >> result;
 }
 
 int main() {
